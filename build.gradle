@@ -26,10 +26,7 @@ allprojects {
     repositories {
         maven { url "https://repo.papermc.io/repository/maven-public/" }
         maven { url 'https://jitpack.io' }
-        maven {
-            name = "devmart-other"
-            url = "https://nexuslite.gcnt.net/repos/other/"
-        }
+        mavenLocal()
         maven { url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/' }
     }
 
