@@ -7,7 +7,7 @@ plugins {
 group 'zEssentials'
 version = property("version")
 
-project.ext {
+project.ext 
     archiveFolder = file("archive/")
     targetFolder = file("target/")
     buildVersion = System.getenv("BUILD_NUMBER") == null || Boolean.parseBoolean(System.getenv("STABLE_BUILD")) ? version : version + "-b" + System.getenv("BUILD_NUMBER")
@@ -28,10 +28,7 @@ allprojects {
         maven { url 'https://jitpack.io' }
         maven { url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/' }
         mavenLocal()
-        maven {
-            name = "devmart-other"
-            url = "https://nexuslite.gcnt.net/repos/other/"
-        }
+
     }
 
     dependencies {
